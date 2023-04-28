@@ -231,6 +231,7 @@ p {
 .year{
     letter-spacing: -5px;
     width:400px;
+    padding-right: 20px;
     font-size: 90px;
     font-weight: var(--weight-bold);
     color: transparent;
