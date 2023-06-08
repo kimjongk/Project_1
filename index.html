@@ -9,19 +9,18 @@
     <title>라이징테크 - 사람과 반려동물을 위한 공간</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@400;600;700&family=Roboto:wght@100;300;400&family=Song+Myung&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@400;600;700&family=Roboto:wght@100;300;400&family=Song+Myung&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="rising imgs/favicon.png">
-    <script src="http://code.jquery.com/jquery-latest.min.js" defer></script>
     <script src="https://kit.fontawesome.com/9a1fbb0624.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <nav id="navbar">
         <div class="navbar_logo">
-            <a href="http://naver.com" class="babion_logo">
+            <a href="#" class="babion_logo">
                 <img src="rising imgs/rising_logo.png" alt="라이징테크 로고">
             </a>
         </div>
@@ -50,6 +49,9 @@
                 <ol>방송 협찬</ol>
             </li>
             <li class="navbar__menu__item" data-link="#testimonials">CONTACT US</li>
+            <button class="navbar__menu_toggle">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
         </ul>
             <!-- Toogle button -->
             <button class="togle-btn navbar__toggle-btn2">
@@ -73,7 +75,7 @@
     </div>
 
     <section>
-        <video id="main" width="100%" height="100%" muted autoplay loop src="rising imgs/main_video.mp4">
+        <video id="main" width="100%" height="100%" autoplay muted loop src="rising imgs/main_video.mp4">
     </section>
 
 
@@ -91,14 +93,13 @@
                 <div class="brand_btn">MORE<br />ON<br />RISING</div>
             </div>
             <div class="brandimg_boxes">
-                <div class="brand_img_1">
-                    <div class="brandimg_box">
-                        <img src="rising imgs/brand_img1.jpg" alt="브랜드 관련 이미지1">
-                    </div>
+                <div class="brandimg_box">
+                    <img src="rising imgs/brand_img1.jpg" alt="브랜드 관련 이미지1">
                 </div>
             </div>
         </div>
     </section>
+    
     <section id="brand_history">
         <div class="brand_year">
             <div class="year">~2017</div>
@@ -259,7 +260,7 @@
     </section>
 
     <section id="business">
-        <div class="business_wrap">
+        <div class="business_section">
             <div class="business_main">
                 <p class="section_title business_tilte">주요사업</p>
                 <h3 class="section_description business_description">당사의 상품(수입,제조,유통)은 현재 포털사이트(네이버등),<br />
@@ -278,9 +279,8 @@
                 <div class="business_body">
                     <div class="business_wrap">
                         <h1 class="business_name">이미용가전</h1>
-                        <div class="business_des">
-                            <h3>바비온 – 주식회사 라이징테크의 이미용 이발기 전문 브랜드 ‘바비온(Babion)’<br />런칭 3년만에 이발기/바리깡 온오프라인 판매 1위를 기록</h3>
-                        </div>
+                        <p class="business_des">바비온 – 주식회사 라이징테크의 이미용 이발기 전문 브랜드 ‘바비온(Babion)’
+                            런칭 3년만에 이발기/바리깡 온오프라인 판매 1위를 기록</p>                    
                     </div>
                 </div>
                 <div class="business_samples">
@@ -386,63 +386,65 @@
         </div>
     </section>
     <section id="AD">
-        <p class="ad_title">후원 및 광고</p>
-        <div class="ad_img">
-            <img src="" class="img-item img-item1">
-            <img src="" class="img-item img-item2">
-            <img src="" class="img-item img-item3">
-        </div>
-        <div class="ad_line"></div>
-        <div class="youtube_container">
-            <div class="youtube_item">
-                <div class="mov_frame">
-                    <iframe width="760" height="423" src="https://www.youtube.com/embed/KFf1_nxNstI"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <a href="https://www.youtube.com/watch?v=KFf1_nxNstI" target="_blank" class="txt">
-                    <h2 class="youtube_title">미용으로 180도 달라진 갱얼쥐</h2>
-                    <p>그루밍공식 시즌3 EP02 카이 미용편<br>바로가기 ▶</p> 
-                </a>
+        <div class="ad_container">
+            <p class="ad_title">후원 및 광고</p>
+            <div class="ad_img">
+                <img src="" class="img-item img-item1">
+                <img src="" class="img-item img-item2">
+                <img src="" class="img-item img-item3">
             </div>
-            <div class="length_line"></div>
-            <div class="youtube_list">
-                <div class="youtube_items">
+            <div class="ad_line"></div>
+            <div class="youtube_container">
+                <div class="youtube_item">
                     <div class="mov_frame">
-                        <iframe width="190" height="105" src="https://www.youtube.com/embed/07UPzSvc3v4"
+                        <iframe width="760" height="423" src="https://www.youtube.com/embed/KFf1_nxNstI"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=07UPzSvc3v4" target="_blank" class="txt">
-                        <p class="youtube_title_sub">충격실존 강아지가 너무 동그랗다</p>
-                        <p>그루밍공식 시즌3 EP01 백미 입양편<br>바로가기 ▶</p> 
+                    <a href="https://www.youtube.com/watch?v=KFf1_nxNstI" target="_blank" class="txt">
+                        <h2 class="youtube_title">미용으로 180도 달라진 갱얼쥐</h2>
+                        <p>그루밍공식 시즌3 EP02 카이 미용편<br>바로가기 ▶</p> 
                     </a>
                 </div>
-                <div class="youtube_items">
-                    <div class="mov_frame">
-                        <iframe width="190" height="105" src="https://www.youtube.com/embed/Ge2qE8n-iDw"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                <div class="length_line"></div>
+                <div class="youtube_list">
+                    <div class="youtube_items">
+                        <div class="mov_frame">
+                            <iframe width="190" height="105" src="https://www.youtube.com/embed/07UPzSvc3v4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=07UPzSvc3v4" target="_blank" class="txt">
+                            <p class="youtube_title_sub">충격실존 강아지가 너무 동그랗다</p>
+                            <p>그루밍공식 시즌3 EP01 백미 입양편<br>바로가기 ▶</p> 
+                        </a>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=c7vVeeuRCzg" target="_blank" class="txt">
-                        <p class="youtube_title_sub">강아지야 물개야?</p>
-                        <p>그루밍공식시즌2 EP20_포메라니안 물개컷 미용<br>바로가기 ▶</p> 
-                    </a>
-                </div>
-                <div class="youtube_items">
-                    <div class="mov_frame">
-                        <iframe width="190" height="105" src="https://www.youtube.com/embed/qylLansnxaI"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                    <div class="youtube_items">
+                        <div class="mov_frame">
+                            <iframe width="190" height="105" src="https://www.youtube.com/embed/Ge2qE8n-iDw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=c7vVeeuRCzg" target="_blank" class="txt">
+                            <p class="youtube_title_sub">강아지야 물개야?</p>
+                            <p>그루밍공식시즌2 EP20_포메라니안 물개컷 미용<br>바로가기 ▶</p> 
+                        </a>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=qylLansnxaI" target="_blank" class="txt">
-                        <p class="youtube_title_sub">클리퍼미용이 어려운 사람들은 보라!</p>
-                        <p>그루밍공식시즌2 EP19_이렇게만 하면 된다!<br>바로가기 ▶</p> 
-                    </a>
+                    <div class="youtube_items">
+                        <div class="mov_frame">
+                            <iframe width="190" height="105" src="https://www.youtube.com/embed/qylLansnxaI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=qylLansnxaI" target="_blank" class="txt">
+                            <p class="youtube_title_sub">클리퍼미용이 어려운 사람들은 보라!</p>
+                            <p>그루밍공식시즌2 EP19_이렇게만 하면 된다!<br>바로가기 ▶</p> 
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

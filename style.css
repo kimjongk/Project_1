@@ -10,11 +10,10 @@
     --color-blue: #0065cb;
 
     /* Font size */
-    --font-large: 48px;
+    --font-large: 2rem;
     --font-medium: 1.8rem;
-    --font-regular: 17px;
-    --font-small: 16px;
-    --font-micro: 14px;
+    --font-regular: 1rem;
+    --font-small: .8rem;
 
     /* Font weight */
     --weight-bold: 700;
@@ -74,25 +73,15 @@ h2 {
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    margin: 8px 0;
     letter-spacing: -1px;
 }
 
 h4 {
     font-size: var(--font-small);
     font-weight: var(--font-regular);
-    margin: 8px 0;
     letter-spacing: -1px;
 }
 
-p {
-    font-size: var(--font-regular);
-    font-weight: var(--weight-regular);
-    margin: 4px 0;
-    line-height: 120%;
-    color: var(--color-black);
-    letter-spacing: -1px;
-}
 
 /* -----------------------------navbar----------------------------- */
 #navbar{
@@ -106,10 +95,20 @@ p {
     z-index: 55;
     padding: 1rem 8rem 0 8rem;
 }
+
+#navbar.navbar--dark {
+    background-color: rgba(10, 10, 10, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+}
+
 .navbar__menu {
     cursor: pointer;
 }
-
+.navbar__menu_toggle{
+    display: none;
+}
 .navbar__menu ol {
     display: none;
 }
@@ -356,9 +355,12 @@ p {
     padding: 0px 50px;
     height: 80vh;
     padding: 3rem 8rem 0 8rem;
+    display: flex;
+    align-items: center;
 }
 .brand_wrap {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -372,12 +374,15 @@ p {
     font-weight: bold;
     font-size: 5rem;
 }
-
+.brandimg_boxes{
+    width: 40%;
+    height: 100%;
+    margin-left: 2rem;
+}
 .brandimg_box{
-    width: 550px;
+    width: 100%;
     height: 330px;
     overflow: hidden;
-    margin: 10px;
     object-fit: contain;
     border-radius: 5px;
 }
@@ -405,16 +410,17 @@ p {
 }
 
 .section_description{
-    margin-top: 40px;
     line-height: 1.5;
 }
 
 .brandimg_box img{
+    width: 100%;
     align-items: center;
     justify-content: center;
-    width: 600px;
-    height: auto;
+    object-fit: cover/contain;
 }
+
+/* brand history */
 #brand_history {
     padding-bottom: 80px;
     width: 100vw;
@@ -425,13 +431,6 @@ p {
     display: none;
 }
 
-.brandimg_boxes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 850px;
-    flex-direction: column;
-}
 .brand_year {
     display: flex;
     flex-direction: row;
@@ -472,12 +471,20 @@ p {
 #business{
     background-color: var(--color-orange);
     height: 100vh;
+    width: 100vw;
     padding: 3rem 8rem 0 8rem;
+}
+.business_wrap .business_tilte{
+    width: 100%;
 }
 
 .business_tilte,
 .business_description{
     color: var(--color-white);
+}
+.business_wrap{
+    display: flex;
+    margin-bottom: 1rem;
 }
 
 #business{
@@ -486,19 +493,34 @@ p {
     justify-content:space-between;
     align-items: center;
 }
+.business_name{
+    align-items: center;
+    width: 20%;
+    margin-right: 3rem;
+}
+.business_des{
+    color: var(--color-white);
+    width: 60%;
+}
 
-.business_wrap{
+.business_section{
+    width: 30%;
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
+    margin-right: 8rem;
 }
 
 .business_btns{
     display: flex;
     flex-direction: row;
 }
-
+.business{
+    display: flex;
+    width: 10%;
+    overflow: hidden;
+}
 .business_img{
     width: 20%;
     height: 50%;
@@ -570,19 +592,21 @@ p {
 }
 
 .business_container{
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
+.business_sample{
+    width: 20%
+}
 .business_samples{
     display: flex;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-between;
 }
-.businesses{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+
 
 .business_des{
     line-height: 1.5;
@@ -594,17 +618,18 @@ p {
     flex-direction: column;
 }
 
-.business_samples{
-    margin-top: 40px;
-    justify-content: space-between;
-}
-
 .business_name,
 .business_des h3,
 .sample_name,
 .sample_price,
 .sample_price_e{
     color: var(--color-white);
+    margin-bottom: 0;
+}
+
+.sample_price,
+.sample_price_e{
+    margin-top: 0.5rem;
 }
 
 
@@ -613,7 +638,7 @@ p {
     display: block;
     position: relative;
     left: 0px;
-    width: 112%;
+    width: 100%;
     height: 1px;
     margin-top: 10px;
     background-color: var(--color-white);
@@ -622,11 +647,10 @@ p {
 .business{
     border: var(--color-white) solid;
     border-radius: 5px;
-    width: 200px;
+    width: 100%;
     height: 400px;
     background-color: var(--color-white);
     overflow: hidden;
-    margin-right: 10px;
 }
 
 .business img{
@@ -708,7 +732,7 @@ p {
 
 /* ----------------------------- AD ----------------------------- */
 #AD {
-    height: 130vh;
+    height: 140vh;
     overflow: hidden;
     padding: 3rem 8rem 0 8rem;
     background-color: var(--color-orange);
@@ -869,6 +893,7 @@ p {
 .youtube_items{
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-bottom: 50px;
 }
 .youtube_items a p{
@@ -958,6 +983,9 @@ p {
     #navbar{
         padding: 1rem 2rem 0 2rem;
     }
+    .navbar__menu_toggle{
+        display: block;
+    }
     .navbar__menu{
         display: none;
     }
@@ -965,10 +993,10 @@ p {
         width: 30%;
     }
     .togle-btn{
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3.2rem;
+        height: 3.2rem;
     }
-    .togle-btn img,{
+    .togle-btn img{
         width: 1.2rem;
         height: 1.2rem;
     }
@@ -978,7 +1006,7 @@ p {
     /* --------------------brand-------------------- */
     #brand{
         padding: 1rem 2rem 0 2rem;
-        height: 100vh;
+        height: 80vh;
     }
     .brand_wrap{
         flex-direction: column;
@@ -999,9 +1027,12 @@ p {
     }
     .section_description{
         font-size: 1rem;
+        margin-top: 0;
     }
     .brandimg_boxes{
-        height: 50vh;
+        width: 50%;
+        height: auto;
+        margin: 0;
     }
     .brand_btn{
         display: none;
@@ -1009,7 +1040,7 @@ p {
     .brand_container::after{
         content: 'MORE ON RISING';
         font-size: 1rem;
-        margin: 2rem auto 0 auto;
+        margin: 2rem auto 1rem auto;
         cursor: pointer;
         border: var(--color-black) solid 1px;
         border-radius: 1rem;
@@ -1019,97 +1050,67 @@ p {
         color: var(--color-black);
     }
     .brandimg_box{
-        height: 40vh;
+        height: 100%;
         object-fit: cover;
         justify-content: flex-start;
     }
+    #brand_history{
+        height: 20vh;
+    }
+    .year{
+        font-size: 4rem;
+    }
+    .month{
+        font-size: 1.5rem;
+    }
+    .history{
+        font-size: 0.9rem;
+    }
     /* --------------------business-------------------- */
     #business{
-        padding:0 2rem 0 2rem;
+        padding: 1rem 2rem 0 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         text-align: center;
-        height: 100vh;
-        width: 100vw;
+    }
+    .business_section{
+        width: 100%;
+        margin: 0 2rem 0 2rem;
+    }
+    .business_wrap{
+        margin: 0;
+    }
+    .business_main{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
     }
     .business_tilte{
-        font-size: 3.5rem;
         margin-top: 3rem;
-    }
-    .business_tilte::after{
-        content: '';
-        display: block;
-        width: 50%;
-        height: 1px;
-        margin: 2rem auto 0 auto;
-        background-color: var(--color-white);
-    }
-    .business_description{
-        font-size: 1rem;
-        margin: 2.2rem 0 1.5rem 0;
-    }
-    .business_right_btn,
-    .business_left_btn{
-        font-size: 1.2rem;
-        width: 40px;
-        height: 40px;
-    }
-    .business_right_btn{
-        left: -30px;
-    }
-    .business_left_btn{
-        left: 540px;
-    }
-
-    .business_btns{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.5rem;
-    }
-    .businesses_container{
-        display: flex;
-        flex-direction: column;
+        font-size: 3.5rem;
     }
     .business_name{
         display: none;
     }
-    .business_wrap{
-        flex-direction: column;
-        justify-content: center;
+    .business_des{
+        margin: 1rem auto;
     }
     .business{
-        width: 5rem;
-        height: 10rem;
-        margin: 0;
-    }
-    .business_body::after{
+        height: 50%;
         width: 100%;
-        margin-top: 30px;
     }
     .business_sample{
-        justify-self: center;
-    }
-    .business_samples{
-        display: flex;
-        margin: 2rem auto 0 auto;
-    }
-    .business{
-        margin: 0 1.5rem 0 1.5rem;
-    }
-    .business{
+        margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
     }
-    .sample_name{
-        display: none;
-    }
-    .business img{
-        width: 100%;
+    .business_samples{
+        margin-top: 2rem;
+        display: flex;
     }
     /* --------------------news-------------------- */
     .news_wrap{
-        padding: 1rem;
+        padding: 2rem;
     }
     .news_tittle{
         font-size: 1.5rem;
@@ -1125,7 +1126,7 @@ p {
     /* ------------------------AD----------------------- */
     #AD{
         padding: 1rem 2rem 0 2rem;
-        height: 170vh;
+        height: 165vh;
     }
     .ad_title{
         margin-top: 3rem;
@@ -1214,6 +1215,9 @@ p {
         height: 1px;
         margin-top: 2rem;
     }
+    .youtube_items a p{
+        margin: 0;
+    }
     .youtube_item .mov_frame{
         position: relative;
         padding-bottom: 55%;
@@ -1221,6 +1225,7 @@ p {
     }
     .youtube_items{
         margin-bottom: 0;
+        align-items: flex-start;
     }
     .mov_frame iframe{
         position: absolute;
@@ -1280,6 +1285,27 @@ p {
     }
     .company_social a img:nth-child(1){
         margin: 0;
+    }
+}
+@media screen and (min-width:1920px){
+    .section_title{
+        font-size: 6.5rem;
+    }
+    .section_description{
+        font-size: 1.2rem;
+    }
+    .brandimg_box{
+        width: 600px;
+        height: auto;
+    }
+    .business_name{
+        font-size: 3rem;
+    }
+    .business_des{
+        font-size: 1.2rem;
+    }
+    #AD{
+        height: 135vh;
     }
 }
 
